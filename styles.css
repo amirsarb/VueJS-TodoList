@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Jost", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 3rem;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #007bdf;
+  color: white;
+  text-align: center;
+}
+
+#user-tasks {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 3rem;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+#user-tasks h2 {
+  font-size: 2rem;
+  border-bottom: 4px solid #ccc;
+  color: #007bdf;
+  margin: 0 0 1rem 0;
+}
+
+#user-tasks ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+#user-tasks li {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: #469ddb;
+  padding: 0.5rem;
+  color: #ffffff;
+  border-radius: 25px;
+}
+
+#user-tasks input {
+  font: inherit;
+  border: 1px solid #ccc;
+}
+
+#user-tasks input:focus {
+  outline: none;
+  border-color: #1b995e;
+  background-color: #d7fdeb;
+}
+
+#user-tasks button {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid #45b784;
+  background-color: #45b784;
+  color: white;
+  padding: 0.05rem 1rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
+}
+
+#user-tasks button:hover,
+#user-tasks button:active {
+  background-color: #3b966d;
+  border-color: #3b966d;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+}
+
+#myname {
+  color: #b1b1b1;
+  text-align: center;
+  border-top: 1px solid #d7d7d7;
+}

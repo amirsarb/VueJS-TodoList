@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vue - Todo List</h1>
+    </header>
+    <section id="user-tasks">
+      <h2>My Task List</h2>
+      <input
+        @keyUp.enter="addTask(currentTask)"
+        v-model="currentTask"
+        type="text"
+      />
+      <button @click="addTask(currentTask)">Add Task</button>
+      <p v-if="userTasks.length===0">
+        No task have been added yet - please start!
+      </p>
+      <ul id="ulList">
+        <li
+          v-for="(task,index) in userTasks"
+          :key="index"
+          @click="removeTask(index)"
+          v-if="listIsVisible"
+        >
+          {{index+1}} - {{task}}
+        </li>
+      </ul>
+
+      <button @click="toggleVisibility()">
+        {{listIsVisible? 'Hide' : 'Show'}} List
+      </button>
+    </section>
+    <h4 id="myname"><i>Amir Sarb</i></h4>
+  </body>
+</html>
